@@ -11,16 +11,14 @@
         <br>
         <label>Upload Image</label>
         <input type="file" name="profileImage" placeholder="upload Image">
-        <button type="submit">submit</button>
-
+        <button type="submit"><a href="index.html"></a>submit</button>
     </form>
-
-    <table>
-        <?php foreach($allDetails as $key): ?>
-        <tr>
-            <td><?php echo $key -> name; ?></td>
-        </tr>
-        <?php endforeach; ?>
-    </table>
+        <?php foreach($allDetails as $allDetail){ ?>
+            <div class="mainContainer" style="display: flex">
+            <img src="<?php echo $allDetail->images; ?>" width="100" height="100">
+            <h1><?php echo $allDetail->name; ?></h1>
+            <br>
+        </div>
+    <?php } ?>
 </body>
 </html>

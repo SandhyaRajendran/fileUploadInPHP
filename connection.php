@@ -6,7 +6,7 @@ class Database
 
     public function __construct()
     {
-        try{
+        try {
             $this->db = new PDO
             (
                 'mysql:host=127.0.0.1;dbname=image_upload',
@@ -14,7 +14,6 @@ class Database
                 'welcome'
             );
         }
-        
         catch(PDOException $e){
             // die("connection error");
            echo $e->getMessage();
